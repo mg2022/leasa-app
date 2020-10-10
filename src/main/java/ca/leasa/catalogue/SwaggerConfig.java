@@ -22,7 +22,7 @@ public class SwaggerConfig {
 	public Docket postsApi() {
 		
 		return new Docket(DocumentationType.SWAGGER_2).groupName("public-api")
-				.apiInfo(apiInfo()).select().paths(postPaths()).build();
+				.apiInfo(apiInfo()).select().paths(regex("/*/*.*")).build();
 			
 		/*
 		return new Docket(DocumentationType.SWAGGER_2)
@@ -37,7 +37,7 @@ public class SwaggerConfig {
 	}
 
 	private Predicate<String> postPaths() {
-		return or(regex("/catalogue/*.*"), regex("/api/javainuse.*"));
+		return or(regex("/*/*.*"), regex("/*/*.*"));
 		//return or(regex("/api/*"), regex("/*"));
 	}
 	
