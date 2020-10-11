@@ -38,7 +38,7 @@ public class CatalogueController2 {
     @Produces(MediaType.APPLICATION_JSON)
 	public void saveItem(){
 		
-		catalogueService.saveItem();
+		//catalogueService.saveItem();
 	
 	}
 	
