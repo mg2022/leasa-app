@@ -1,4 +1,4 @@
-package ca.leasa.catalogue.controller;
+package ca.leasa.catalogue.controllers;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import ca.leasa.catalogue.impl.CatalogueService;
+import ca.leasa.catalogue.services.CatalogueService;
 
 @RestController
 @Path("catalogue2")

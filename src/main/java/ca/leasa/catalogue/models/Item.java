@@ -1,9 +1,10 @@
-package ca.leasa.catalogue.model;
+package ca.leasa.catalogue.models;
 
 import java.math.BigDecimal;
 
 public class Item {
 
+	String userOwner;
 	String category;
 	String subCategory;
 	String title;
@@ -11,6 +12,10 @@ public class Item {
 	BigDecimal dailyPrice;
 	String imageID;
 	String sku;
+	
+	//gets set after creation
+	Long id;
+	ItemSchedule itemSchedule = new ItemSchedule();
 	
 	
 	public String getCategory() {
@@ -56,6 +61,31 @@ public class Item {
 	public void setSku(String sku) {
 		this.sku = sku;
 	}
+	public ItemSchedule getItemSchedule() {
+		return itemSchedule;
+	}
+	public void setItemSchedule(ItemSchedule itemSchedule) {
+		this.itemSchedule = itemSchedule;
+	}
 	
+	
+	
+	//return this
+	
+	public String getUserOwner() {
+		return userOwner;
+	}
+	public Item setUserOwner(String userOwner) {
+		this.userOwner = userOwner;
+		return this;
+	}
+	public Long getId() {
+		return id;
+	}
+	public Item setId(Long id) {
+		this.id = id;
+		return this;
+	}
+
 	
 }
